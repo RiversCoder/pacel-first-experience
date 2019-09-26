@@ -8,19 +8,23 @@
 ```
 
 3. 配置文件
-```js
+```json
 {
   "presets": [
-    [ "@babel/preset-env"]
+    [ "@babel/preset-env", {
+        "useBuiltIns": "usage",
+      }
+    ]
   ],
   "plugins": [
     [
-      "@babel/plugin-transform-runtime",{
+      "@babel/plugin-transform-runtime", {
         "corejs": 2,
       }
     ]
   ]
 }
+
 ```
 
 4. 修改`index.js`
