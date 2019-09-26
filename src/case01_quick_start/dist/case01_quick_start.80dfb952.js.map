@@ -1,0 +1,1 @@
+{"version":3,"sources":["../index.js"],"names":["console","log"],"mappings":"AAAAA,OAAO,CAACC,GAAR,CAAY,sBAAZ","file":"case01_quick_start.80dfb952.js","sourceRoot":"..\\html","sourcesContent":["console.log('hello parcel ~~~ hei');\r\n"]}
