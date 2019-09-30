@@ -1,4 +1,4 @@
-// 导入一个css文件
+/* // 导入一个css文件
 import './test.css'
 
 // 导入包含 CSS 模块的 CSS 文件
@@ -20,4 +20,18 @@ require('./some.html')
 // 写入 box
 let iframe = document.createElement('div');
 iframe.innerHTML = html;
-document.body.append(iframe);
+document.body.append(iframe); */
+
+import fs from 'fs'
+
+// 以字符串的形式读取内容
+const string = fs.readFileSync(__dirname + '/test.txt', 'utf8')
+console.log(string)
+
+// 以 Buffer 的形式读取内容
+const buffer = fs.readFileSync(__dirname + '/test.png')
+
+// 转换Buffer格式到图片
+let img = document.createElement('img');
+img.src = `data:image/png;base64,${buffer.toString('base64')}`;
+document.body.append(img);
